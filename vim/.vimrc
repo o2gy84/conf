@@ -5,6 +5,10 @@ set smarttab
 set expandtab
 set smartindent
 
+set hlsearch
+" temporary disable highliting
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
 set t_Co=256  " 256-color terminal
 
 syntax on
