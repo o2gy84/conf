@@ -21,6 +21,7 @@ augroup quickfix
 augroup END
 
 au BufNewFile,BufRead *.cpp set syntax=cpp11
+au BufNewFile,BufRead *.hpp set syntax=cpp11
 
 map <F2> :execute "vimgrep /" . expand("<cword>") . "/ **/*.c **/*.cpp **/*.h **/*.hpp **/*.xs **/*.pm **/*.pl **/*.py" <Bar> cw<CR>
 map <F3> :cn<CR>
