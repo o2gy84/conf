@@ -38,6 +38,8 @@ map kk :normal ^<CR>
 map jj vip<CR>
 nmap hh :LinesCommentNextState <CR>
 vmap hh :LinesCommentNextState <CR>
+map [[ :normal [{<CR>
+map ]] :normal ]}<CR>
 
 map <F12> :!/usr/bin/ctags -R --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
