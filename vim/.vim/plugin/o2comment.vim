@@ -18,6 +18,8 @@ function! s:LinesCommentNextState() range
         let l:comment_symbol = "\""
     elseif l:extension == "lua"
         let l:comment_symbol = "--"
+    elseif l:extension == "go"
+        let l:comment_symbol = "\/\/"
     else
         "default '#'
     endif
