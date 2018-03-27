@@ -1,0 +1,12 @@
+[user]
+	email = v.mogilin@corp.mail.ru
+	name = Могилин Виктор
+[color]
+	ui = auto
+[core]
+	editor = vim
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
