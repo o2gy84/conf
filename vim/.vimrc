@@ -48,5 +48,5 @@ map <F12> :!/usr/bin/ctags -R --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=
 
 " TODO: use better way
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <C-]> :vsplit<CR>:exec("tag ".expand("<cword>"))<CR>
+map <C-]> :split<CR>:exec("tag ".expand("<cword>"))<CR>
 " map <F7> :tabnew<CR>:!make<CR>:!sleep 1<CR>:tabclose<CR>
