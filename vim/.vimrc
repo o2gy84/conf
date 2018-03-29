@@ -22,9 +22,17 @@ augroup quickfix
     autocmd FileType qf nnoremap <buffer> <Enter> <C-w><Enter><C-w> " <-- horizontal split. vertical: <C-w><Enter><C-w>L
 augroup END
 
-let g:go_def_mapping_enabled = 0
+let g:go_autodetect_gopath = 1
+let g:go_def_mapping_enabled = 1
 let g:go_textobj_enabled = 0
+
 let g:go_fmt_autosave = 0
+let g:go_highlight_types = 1
+" let g:go_highlight_fields = 1
+" let g:go_highlight_functions = 1
+" let g:go_highlight_methods = 1
+let g:go_highlight_extra_types = 1
+" let g:go_highlight_generate_tags = 1
 
 au BufNewFile,BufRead *.cpp set syntax=cpp11
 au BufNewFile,BufRead *.hpp set syntax=cpp11
