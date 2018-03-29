@@ -22,6 +22,10 @@ augroup quickfix
     autocmd FileType qf nnoremap <buffer> <Enter> <C-w><Enter><C-w> " <-- horizontal split. vertical: <C-w><Enter><C-w>L
 augroup END
 
+let g:go_def_mapping_enabled = 0
+let g:go_textobj_enabled = 0
+let g:go_fmt_autosave = 0
+
 au BufNewFile,BufRead *.cpp set syntax=cpp11
 au BufNewFile,BufRead *.hpp set syntax=cpp11
 
