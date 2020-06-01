@@ -1,5 +1,8 @@
 execute pathogen#infect()
 
+call plug#begin('~/.vim/plugged')
+call plug#end()
+
 set number
 set tabstop=4
 set shiftwidth=4
@@ -38,18 +41,16 @@ let g:go_highlight_extra_types = 1
 
 au BufNewFile,BufRead *.cpp set syntax=cpp11
 au BufNewFile,BufRead *.hpp set syntax=cpp11
+au BufNewFile,BufRead *.h set syntax=cpp11
 
-map <F2> :execute "vimgrep /" . expand("<cword>") . "/ **/*.c **/*.cpp **/*.h **/*.hpp **/*.xs **/*.pm **/*.pl **/*.py" <Bar> cw<CR>
-map <F3> :cn<CR>
-map <F4> :cp<CR>
+map <F4> :execute " grep -srnw --binary-files=without-match --exclude-dir=.git . -e " . expand("<cword>") . " " <bar> cwindow<CR>
 nmap <F5> :NERDTreeToggle<CR><C-w><Right>
 nmap <F6> :TagbarToggle<CR>
 map <F7> :!gotags -R -f tags -silent .<CR>
 map <F12> :!/usr/bin/ctags -R --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
-
-map <S-l> :tabnext<CR>
-map <S-k> :tabprevious<CR>
+"map <S-l> :tabnext<CR>
+"map <S-k> :tabprevious<CR>
 map tg :tabprevious<CR>
 
 map ll :normal $<CR>
@@ -64,3 +65,14 @@ map ]] :normal ]}<CR>
 " TODO: use better way
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <C-]> :split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_posix_standard = 1
+let g:cpp_experimental_simple_template_highlight = 1
+let g:cpp_experimental_template_highlight = 1
+let g:cpp_concepts_highlight = 1
+""""""""""""""""""""""""""""""""""""""""""""""""
+
