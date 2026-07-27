@@ -43,6 +43,7 @@ export LS_COLORS
 export HISTCONTROL=ignoreboth:erasedups
 
 export PATH=$PATH:/usr/local/go/bin
+export TMOUT=0
 
 alias ls="ls --color=auto"
 alias rm='rm -v'
