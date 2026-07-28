@@ -10,3 +10,7 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[url "https://github.com/"]
+	insteadOf = git://github.com/
+[url "ssh://git@gitlab.corp.mail.ru/"]
+	insteadOf = https://gitlab.corp.mail.ru/
